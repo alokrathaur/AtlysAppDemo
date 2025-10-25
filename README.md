@@ -1,4 +1,4 @@
-# Atlys App Demo - Refactored Architecture
+# Atlys App Demo 
 
 ## Overview
 This project demonstrates a clean, maintainable SwiftUI architecture following MVVM pattern with reusable components. The app features a beautiful horizontal carousel showcasing travel destinations with country names and visa information.
