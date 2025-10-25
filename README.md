@@ -3,6 +3,12 @@
 ## Overview
 This project demonstrates a clean, maintainable SwiftUI architecture following MVVM pattern with reusable components. The app features a beautiful horizontal carousel showcasing travel destinations with country names and visa information.
 
+**##Preview**
+
+https://github.com/user-attachments/assets/7d3d5281-c174-4fd2-a17a-0cb2af36725d
+
+
+
 ## Architecture
 
 ### 📁 Project Structure
