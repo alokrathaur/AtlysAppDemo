@@ -32,6 +32,7 @@ AtlysAppDemo/
     └── logo.imageset/                   # App logo
 ```
 
+
 ## Architecture Principles
 
 ### 🏗️ MVVM Pattern
@@ -93,18 +94,45 @@ static let `default` = CarouselConfiguration(
 
 ### Adding New Destinations
 
- `ContentView.swift` to add destinations:
+The carousel is designed to work with **any number of images** (3, 5, 10, etc.). Simply add more destination objects to the `destinations` array in `ContentView.swift`:
 
 ```swift
 private let destinations: [DestinationCard] = [
     DestinationCard(
-        imageUrl: "https://your-image-url.com/image.jpg",
-        countryName: "Your Country",
+        imageUrl: "https://media.istockphoto.com/id/845702822/photo/top-view-of-the-new-downtown-of-amman.jpg?s=612x612&w=0&k=20&c=Bm7uu-rw2jq-zl2zyNvMSy4ZyyZCQthJpec1x0brSUk=",
+        countryName: "Dubai",
+        visaCount: "53K+"
+    ),
+    DestinationCard(
+        imageUrl: "https://i.guim.co.uk/img/media/55b58f9514a6ccb5a57d59d04151af12864acf69/0_374_5616_3370/master/5616.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=416add2213cc99b0e4b11206ea66407b",
+        countryName: "Malaysia",
+        visaCount: "32K+"
+    ),
+    DestinationCard(
+        imageUrl: "https://i.pinimg.com/736x/19/92/bb/1992bb635a346c5c2ffc72ab56824391.jpg",
+        countryName: "Thailand",
+        visaCount: "25K+"
+    ),
+    // Add 4th image
+    DestinationCard(
+        imageUrl: "your-4th-image-url",
+        countryName: "Country Name 4",
         visaCount: "XXK+"
     ),
-    // Add more destinations...
+    // Add 5th image
+    DestinationCard(
+        imageUrl: "your-5th-image-url",
+        countryName: "Country Name 5",
+        visaCount: "XXK+"
+    )
 ]
 ```
+
+**✨ No code changes required!** The carousel will automatically:
+- Display the correct number of pagination indicators
+- Handle navigation between all images
+- Maintain proper drag boundaries (first image can't go left, last can't go right)
+- Apply consistent layout and styling to all images
 
 ### Customizing Appearance
 
